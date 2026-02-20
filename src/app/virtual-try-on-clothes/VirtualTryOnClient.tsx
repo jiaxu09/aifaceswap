@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Shirt, Wand2, Download, RotateCcw, Sparkles } from "lucide-react";
 import UploadZone from "@/components/UploadZone";
 import FAQSection from "@/components/FAQSection";
+import PolicyDisclaimer from "@/components/PolicyDisclaimer";
 
 const faqs = [
   {
@@ -290,12 +291,15 @@ export default function VirtualTryOnClient() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-white/5">
+      <section className="border-t border-white/5 pb-8">
         <FAQSection
           title="Virtual Try On FAQ"
           items={faqs}
         />
       </section>
+
+      {/* Legal Disclaimer */}
+      <PolicyDisclaimer />
     </div>
   );
 }

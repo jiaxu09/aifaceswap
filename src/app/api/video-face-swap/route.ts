@@ -28,6 +28,8 @@ export async function POST(request: NextRequest) {
       input_video: videoBlob,
       gender: gender,
     });
+    
+    console.log(result.data);
 
     const data = result.data as any[];
     // The result is typically { url: string } or a string URL

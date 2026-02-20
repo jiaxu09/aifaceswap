@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AIFaceSwapClient from "./AIFaceSwapClient";
 
 export const metadata: Metadata = {
-  title: "Best AI Face Swap Photo Generator | DeepSwap Alternative Online Free",
+  title: "Best AI Face Swap Photo Generator | DeepSwap Alternative Online",
   description:
-    "The best AI face swap photo tool online. Swap faces in any image for free — better than DeepSwap AI. Create realistic face swap photos with our advanced AI face changer. No watermark, instant results. Try deepswap free online alternative.",
+    "The best AI face swap photo tool online. Request a free trial to swap faces in any image — better than DeepSwap AI. Create realistic face swap photos with our advanced AI face changer. No watermark.",
   keywords: [
     "deepswap",
     "deepswap ai",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     "aifaceswap",
   ],
   openGraph: {
-    title: "Best AI Face Swap Photo Generator | Free DeepSwap Alternative",
+    title: "Best AI Face Swap Photo Generator | DeepSwap Alternative",
     description:
-      "Swap faces in any photo with AI for free. Better than DeepSwap — no watermark, instant results. The best AI face changer online.",
+      "Swap faces in any photo with AI. Better than DeepSwap — no watermark, instant results. Start your free trial online.",
     url: "https://aifaceswap.studio/ai-face-swap",
   },
 };

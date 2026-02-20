@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import VideoFaceSwapClient from "./VideoFaceSwapClient";
 
 export const metadata: Metadata = {
-  title: "High-Quality AI Video Face Swap Online | Replace Face in Video Free",
+  title: "High-Quality AI Video Face Swap Online | Replace Face in Video",
   description:
-    "Swap faces in any video with our free AI video face swap tool. Works like the Reface app but online — no download needed. Create deepfake face swap videos, replace faces in video online free, and produce professional face swap videos instantly.",
+    "Swap faces in any video with our AI video face swap tool. Works like the Reface app but online — no download needed. Start with a free trial to create deepfake face swap videos.",
   keywords: [
     "video face swap",
     "reface app",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "ai video face swap",
   ],
   openGraph: {
-    title: "AI Video Face Swap Online Free | Replace Face in Any Video",
+    title: "AI Video Face Swap Online | Replace Face in Any Video",
     description:
-      "The best free video face swap tool. Replace faces in videos online with AI — no watermark, no download required. Better than Reface app.",
+      "The best video face swap tool. Replace faces in videos online with AI — no watermark, no download required. Start your free trial today.",
     url: "https://aifaceswap.studio/video-face-swap",
   },
 };

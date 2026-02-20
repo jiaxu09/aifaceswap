@@ -69,7 +69,10 @@ export default function Footer() {
                 <Link href="/faq" className="text-sm text-white/40 hover:text-white transition-colors">FAQ</Link>
               </li>
               <li>
-                <span className="text-sm text-white/40 cursor-default line-through">Blog</span>
+                <Link href="/pricing" className="text-sm text-white/40 hover:text-white transition-colors">Pricing</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-white/40 hover:text-white transition-colors">Blog</Link>
               </li>
             </ul>
           </div>

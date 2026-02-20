@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Video, Wand2, Download, RotateCcw, Sparkles } from "lucide-react";
 import UploadZone from "@/components/UploadZone";
 import FAQSection from "@/components/FAQSection";
+import PolicyDisclaimer from "@/components/PolicyDisclaimer";
 
 const faqs = [
   {
@@ -288,12 +289,15 @@ export default function VideoFaceSwapClient() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-white/5">
+      <section className="border-t border-white/5 pb-8">
         <FAQSection
           title="Video Face Swap FAQ"
           items={faqs}
         />
       </section>
+
+      {/* Legal Disclaimer */}
+      <PolicyDisclaimer />
     </div>
   );
 }

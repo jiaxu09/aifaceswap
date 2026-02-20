@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AppProvider from "@/components/AppProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -57,9 +58,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        <Navbar />
-        <main className="pt-16 min-h-screen">{children}</main>
-        <Footer />
+        <AppProvider>
+          <Navbar />
+          <main className="pt-16 min-h-screen">{children}</main>
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

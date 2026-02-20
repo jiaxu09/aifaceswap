@@ -15,7 +15,7 @@ const generalFaqs = [
   },
   {
     question: "Do I need to pay to use the tools?",
-    answer: "Currently, our tools are powered by free Hugging Face ZeroGPU spaces. They are completely free to use, though you may occasionally experience wait times during periods of high demand.",
+    answer: "We offer a Free Trial for all of our tools so you can test the quality. After the trial, we use a flexible Pay-As-You-Go credit system starting at $29.9 for 500 credits. No monthly subscriptions required!",
   },
   {
     question: "Why do I sometimes get a 'heavy load' error?",

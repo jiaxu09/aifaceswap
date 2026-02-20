@@ -8,14 +8,17 @@ import {
   Shield,
   Clock,
   Sparkles,
+  Calendar,
+  User,
 } from "lucide-react";
 import FAQSection from "@/components/FAQSection";
+import { getAllPosts } from "@/lib/posts";
 
 const features = [
   {
     title: "Video Face Swap",
     description:
-      "Replace any face in videos with AI-powered deepfake technology. Create realistic face swap videos online for free — perfect for content creators, filmmakers, and social media.",
+      "Replace any face in videos with AI-powered deepfake technology. Create realistic face swap videos online — perfect for content creators, filmmakers, and social media.",
     icon: Video,
     href: "/video-face-swap",
     gradient: "from-purple-500 to-indigo-500",
@@ -33,7 +36,7 @@ const features = [
   {
     title: "AI Face Swap Photo",
     description:
-      "Instantly swap faces in any photo using advanced AI. Our deepswap technology delivers photorealistic results — the best free AI face swap tool for images online.",
+      "Instantly swap faces in any photo using advanced AI. Our deepswap technology delivers photorealistic results — the best AI face swap tool for images online.",
     icon: ImageIcon,
     href: "/ai-face-swap",
     gradient: "from-pink-500 to-rose-500",
@@ -56,7 +59,7 @@ const homeFaqs = [
   {
     question: "Is the video face swap feature truly free?",
     answer:
-      "Yes! Our video face swap tool is completely free to use with no watermarks. You can replace faces in videos online free of charge. We offer a generous free tier that covers most personal use cases. Simply upload your target video and source face to get started — no sign-up required.",
+      "We offer a free trial for you to test out the video face swap tool with no watermarks. After the trial, we offer affordable pay-as-you-go credit packs. You can replace faces in videos online directly from your browser. Simply upload your target video and source face to get started — no sign-up required for the trial.",
   },
   {
     question: "How does the virtual try on clothes feature work?",
@@ -76,6 +79,8 @@ const homeFaqs = [
 ];
 
 export default function HomePage() {
+  const latestPosts = getAllPosts().slice(0, 3);
+
   return (
     <div className="page-enter">
       {/* Hero Section */}
@@ -89,19 +94,19 @@ export default function HomePage() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-medium text-purple-300 mb-8">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Powered by Next-Gen AI Technology</span>
+              <span>Free trials available for all tools</span>
             </div>
 
             {/* H1 — Primary keywords here */}
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
-              <span className="text-white">The Best Free </span>
+              <span className="text-white">The Ultimate </span>
               <span className="gradient-text">AI Face Swap</span>
               <span className="text-white"> Tool Online</span>
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-white/50 max-w-2xl mx-auto leading-relaxed">
               Swap faces in videos, try on clothes virtually, and create stunning AI-generated
-              face swap photos — all in one powerful platform. Free, fast, and private.
+              face swap photos — all in one powerful platform. Start for free.
             </p>
 
             {/* CTA Buttons */}
@@ -111,22 +116,14 @@ export default function HomePage() {
                 className="btn btn-lg bg-gradient-to-r from-purple-600 to-blue-600 border-0 text-white hover:from-purple-500 hover:to-blue-500 btn-glow rounded-xl px-8 gap-2"
               >
                 <Video className="w-5 h-5" />
-                Video Face Swap
+                Start Free Trial
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/virtual-try-on-clothes"
-                className="btn btn-lg btn-outline border-white/10 text-white/80 hover:bg-white/5 hover:border-white/20 rounded-xl px-8 gap-2"
+                href="/pricing"
+                className="btn btn-lg btn-outline border-white/10 text-white/80 hover:bg-white/5 hover:border-white/20 rounded-xl px-8"
               >
-                <Shirt className="w-5 h-5" />
-                Virtual Try On
-              </Link>
-              <Link
-                href="/ai-face-swap"
-                className="btn btn-lg btn-outline border-white/10 text-white/80 hover:bg-white/5 hover:border-white/20 rounded-xl px-8 gap-2"
-              >
-                <ImageIcon className="w-5 h-5" />
-                Face Swap Photo
+                View Pricing
               </Link>
             </div>
 
@@ -235,6 +232,70 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-white mt-2 mb-3">{item.title}</h3>
                 <p className="text-sm text-white/50 leading-relaxed">{item.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts section */}
+      <section className="py-20 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-6">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Latest <span className="gradient-text">Insights & Guides</span>
+              </h2>
+              <p className="text-white/50 max-w-2xl">
+                Stay updated with the latest trends, tutorials, and tips in AI technology.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="btn btn-outline border-white/10 text-white hover:bg-white/5 rounded-xl shrink-0"
+            >
+              View All Posts <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {latestPosts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group h-full">
+                <article className="glass-card rounded-3xl overflow-hidden h-full flex flex-col border border-white/5 hover:border-purple-500/30 transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(168,85,247,0.15)] bg-black/40">
+                  {post.image && (
+                    <div className="w-full aspect-video relative overflow-hidden bg-white/5">
+                      <img 
+                        src={post.image} 
+                        alt={post.title} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6 sm:p-8 flex flex-col flex-grow">
+                    <div className="flex items-center gap-4 text-xs font-medium text-white/40 mb-4">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5" />
+                        {post.author}
+                      </div>
+                    </div>
+                    
+                    <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
+                      {post.meta_description}
+                    </p>
+                    
+                    <div className="mt-auto flex items-center text-sm font-semibold text-purple-400">
+                      Read article <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
