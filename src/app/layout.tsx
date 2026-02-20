@@ -58,6 +58,39 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        {/* JSON-LD Schema - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AIFaceSwap Studio",
+              url: "https://aifaceswap.studio",
+              logo: "https://aifaceswap.studio/android-chrome-512x512.png",
+              sameAs: [],
+              description:
+                "The best AI face swap tool online. Swap faces in videos, try on clothes virtually, and generate stunning face swap photos.",
+            }),
+          }}
+        />
+        {/* JSON-LD Schema - WebSite with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "AIFaceSwap Studio",
+              url: "https://aifaceswap.studio",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://aifaceswap.studio/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
         <AppProvider>
           <Navbar />
           <main className="pt-16 min-h-screen">{children}</main>

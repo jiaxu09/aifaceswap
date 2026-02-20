@@ -57,6 +57,40 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="page-enter">
+      {/* JSON-LD Schema - BlogPosting */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.meta_description,
+            image: post.image ? `https://aifaceswap.studio${post.image}` : undefined,
+            datePublished: post.date,
+            dateModified: post.date,
+            author: {
+              "@type": "Organization",
+              name: post.author,
+              url: "https://aifaceswap.studio",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "AIFaceSwap Studio",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://aifaceswap.studio/android-chrome-512x512.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://aifaceswap.studio/blog/${post.slug}`,
+            },
+            keywords: post.keywords,
+          }),
+        }}
+      />
+
       {/* Article Header */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 border-b border-white/5">
         <div className="grid-bg absolute inset-0 opacity-50" />

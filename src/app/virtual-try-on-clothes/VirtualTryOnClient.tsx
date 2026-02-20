@@ -127,6 +127,14 @@ export default function VirtualTryOnClient() {
 
   return (
     <div className="page-enter">
+      {/* R18+ Warning */}
+      <div className="bg-red-500/10 border-b border-red-500/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-2 text-sm">
+          <span className="font-bold text-red-400 bg-red-500/20 px-2 py-0.5 rounded text-xs">R18+</span>
+          <span className="text-red-300/80">This page may contain or generate content intended for adults only. By continuing, you confirm you are 18 years or older.</span>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="grid-bg absolute inset-0" />
@@ -228,7 +236,7 @@ export default function VirtualTryOnClient() {
               <h3 className="text-lg font-semibold text-white text-center">
                 👗 Your Virtual Try-On Result
               </h3>
-              <div className="rounded-2xl overflow-hidden bg-black/30 border border-white/5 max-w-sm mx-auto">
+              <div className="rounded-2xl overflow-hidden bg-black/30 border border-white/5 max-w-sm mx-auto aspect-[3/4]">
                 <img
                   src={resultUrl}
                   alt="Virtual try-on result"

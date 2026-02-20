@@ -73,4 +73,4 @@ Yes! A premier **app that puts your face on videos** shouldn't limit you to pre-
 
 It’s 2026. You shouldn't be paying $10 a week just to generate a few funny clips on your phone. Skip the app stores, skip the malware, and elevate your content from any browser.
 
-**Claim your free high-quality generations today and try the ultimate(/video-face-swap) right now.**
+**Claim your free high-quality generations today and try the [ultimate Video Face Swap](/video-face-swap) right now.**

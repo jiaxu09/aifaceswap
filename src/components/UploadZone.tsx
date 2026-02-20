@@ -89,13 +89,13 @@ export default function UploadZone({
             <img
               src={previewUrl}
               alt={file.name}
-              className="w-full h-48 object-cover"
+              className="w-full aspect-[3/4] object-cover"
             />
           )}
           {isVideo && (
             <video
               src={previewUrl}
-              className="w-full h-48 object-cover"
+              className="w-full aspect-[3/4] object-cover"
               muted
               playsInline
               onLoadedData={(e) => {
@@ -106,7 +106,7 @@ export default function UploadZone({
             />
           )}
           {!isImage && !isVideo && (
-            <div className="w-full h-48 flex items-center justify-center bg-white/5">
+            <div className="w-full aspect-[3/4] flex items-center justify-center bg-white/5">
               <FileVideo className="w-12 h-12 text-green-400" />
             </div>
           )}

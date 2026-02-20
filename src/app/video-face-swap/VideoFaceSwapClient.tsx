@@ -122,6 +122,14 @@ export default function VideoFaceSwapClient() {
 
   return (
     <div className="page-enter">
+      {/* R18+ Warning */}
+      <div className="bg-red-500/10 border-b border-red-500/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-2 text-sm">
+          <span className="font-bold text-red-400 bg-red-500/20 px-2 py-0.5 rounded text-xs">R18+</span>
+          <span className="text-red-300/80">This page may contain or generate content intended for adults only. By continuing, you confirm you are 18 years or older.</span>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="grid-bg absolute inset-0" />
@@ -155,7 +163,7 @@ export default function VideoFaceSwapClient() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
             <UploadZone
               label="Upload Target Video"
-              description="MP4, AVI, MOV up to 100MB"
+              description="MP4, AVI, MOV up to 50MB"
               accept="video/*"
               icon="video"
               file={targetVideo}
@@ -211,6 +219,29 @@ export default function VideoFaceSwapClient() {
                 Upload both a target video and source face to get started
               </p>
             )}
+
+            {/* Processing Info Panel */}
+            {isProcessing && (
+              <div className="mt-6 p-5 rounded-2xl bg-purple-500/5 border border-purple-500/20 text-left max-w-md mx-auto space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-lg mt-0.5">⏳</span>
+                  <div>
+                    <p className="text-sm font-medium text-white/80">Processing may take a while</p>
+                    <p className="text-xs text-white/40 mt-1">Longer videos require more processing time. For best results, use clips under 10 seconds.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-lg mt-0.5">⚡</span>
+                  <div>
+                    <p className="text-sm font-medium text-white/80">Want faster, HD results?</p>
+                    <p className="text-xs text-white/40 mt-1">
+                      <a href="/pricing" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">Upgrade to Premium</a> for priority GPU processing, HD quality output, and significantly shorter wait times.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {error && (
               <div className="mt-4 p-3 rounded-xl bg-red-500/10 border border-red-500/20">
                 <p className="text-sm text-red-400">{error}</p>
@@ -224,7 +255,7 @@ export default function VideoFaceSwapClient() {
               <h3 className="text-lg font-semibold text-white text-center">
                 🎉 Your Face Swap Video is Ready!
               </h3>
-              <div className="rounded-2xl overflow-hidden bg-black/30 border border-white/5 aspect-video">
+              <div className="rounded-2xl overflow-hidden bg-black/30 border border-white/5 aspect-[3/4] max-w-sm mx-auto">
                 <video
                   src={resultUrl}
                   controls

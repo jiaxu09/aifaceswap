@@ -26,7 +26,7 @@ const generalFaqs = [
 const featureFaqs = [
   {
     question: "What file formats are supported?",
-    answer: "For images, we support standard formats like JPG, JPEG, PNG, and WebP. For video face swap, we recommend MP4 or MOV. Files should generally be under 100MB.",
+    answer: "For images, we support standard formats like JPG, JPEG, PNG, and WebP. For video face swap, we recommend MP4 or MOV. Files should generally be under 50MB.",
   },
   {
     question: "How can I get the best face swap results?",
@@ -39,8 +39,29 @@ const featureFaqs = [
 ];
 
 export default function FAQPage() {
+  const allFaqs = [...generalFaqs, ...featureFaqs];
+
   return (
     <div className="page-enter">
+      {/* JSON-LD Schema - FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: allFaqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="grid-bg absolute inset-0" />

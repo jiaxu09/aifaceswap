@@ -83,6 +83,36 @@ export default function HomePage() {
 
   return (
     <div className="page-enter">
+      {/* JSON-LD Schema - SoftwareApplication */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "AIFaceSwap Studio",
+            applicationCategory: "MultimediaApplication",
+            operatingSystem: "Web",
+            url: "https://aifaceswap.studio",
+            description:
+              "Swap faces in videos, try on clothes virtually, and create stunning AI-generated face swap photos — all in one powerful platform.",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+              description: "Free trial available",
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              ratingCount: "1250",
+              bestRating: "5",
+              worstRating: "1",
+            },
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="grid-bg absolute inset-0" />

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Client } from "@gradio/client";
+import { Client, handle_file } from "@gradio/client";
+
+// Allow up to 5 minutes for video processing
+export const maxDuration = 300;
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,19 +25,23 @@ export async function POST(request: NextRequest) {
       type: inputVideo.type,
     });
 
-    const client = await Client.connect("tonyassi/video-face-swap", { token: process.env.HF_TOKEN as `hf_${string}` });
+    const client = await Client.connect("tonyassi/video-face-swap", {
+      token: process.env.HF_TOKEN as `hf_${string}`,
+    });
     const result = await client.predict("/generate", {
-      input_image: imageBlob,
-      input_video: videoBlob,
+      input_image: handle_file(imageBlob),
+      input_video: { video: handle_file(videoBlob) },
       gender: gender,
     });
-    
-    console.log(result.data);
+  
 
     const data = result.data as any[];
-    // The result is typically { url: string } or a string URL
+    // Gradio Video component returns { video: { url: string }, subtitles: ... }
     const output = data[0];
-    const resultUrl = typeof output === "string" ? output : output?.url;
+    const resultUrl =
+      typeof output === "string"
+        ? output
+        : output?.video?.url || output?.url || output?.video;
 
     if (!resultUrl) {
       return NextResponse.json(
@@ -46,8 +53,18 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ resultUrl });
   } catch (error: any) {
     console.error("Video face swap error:", error);
+
+    const msg = error?.message || "";
+    // Handle timeout / connection errors
+    if (msg.includes("ETIMEDOUT") || msg.includes("terminated") || msg.includes("Connection errored out")) {
+      return NextResponse.json(
+        { error: "The AI model timed out while processing your video. This can happen with longer videos or when the server is busy. Please try again with a shorter video clip." },
+        { status: 504 }
+      );
+    }
+
     return NextResponse.json(
-      { error: error?.message || "Processing failed. Please try again." },
+      { error: msg || "Processing failed. Please try again." },
       { status: 500 }
     );
   }

@@ -38,7 +38,7 @@ Whether you are a casual shopper or a boutique owner looking to create fashion c
 
 ## How to Virtually Try On Clothes (Step-by-Step)
 
-Say goodbye to poorly optimized mobile apps that require confusing AR measurements. Using the cutting-edge(/virtual-try-on-clothes) tool inside our studio is as simple as uploading two pictures directly from your web browser:
+Say goodbye to poorly optimized mobile apps that require confusing AR measurements. Using the [cutting-edge Virtual Try On](/virtual-try-on-clothes) tool inside our studio is as simple as uploading two pictures directly from your web browser:
 
 1. **Upload Your Photo (The Model):** Take a well-lit, full-body or half-body picture of yourself standing naturally. Tighter clothing in the original photo helps the AI drape the new outfit more accurately.
 2. **Upload the Garment Image:** Found a sweater you like on an e-commerce store? Just screenshot it and upload it as your target clothing. 
@@ -50,8 +50,8 @@ Say goodbye to poorly optimized mobile apps that require confusing AR measuremen
 
 If you are a fashion influencer looking to create digital content, why stop at just clothing? As a full-stack AI media studio, we offer the complete package:
 
-* **Flawless Model Makeovers:** Sometimes the outfit is perfect, but you blinked in your base photo. You can use our lightning-fast(/ai-face-swap) to switch out faces on your generated model images to make sure your aesthetic is flawlessly on point. 
-* **Create Viral Fashion Videos:** OOTD (Outfit of the Day) content thrives on platforms like TikTok and Instagram Reels. Want to instantly drop your face onto a trending fashion runway video or a famous dancer? Check out our viral(/video-face-swap) to create high-engaging video content seamlessly.
+* **Flawless Model Makeovers:** Sometimes the outfit is perfect, but you blinked in your base photo. You can use our [lightning-fast AI Face Swap](/ai-face-swap) to switch out faces on your generated model images to make sure your aesthetic is flawlessly on point. 
+* **Create Viral Fashion Videos:** OOTD (Outfit of the Day) content thrives on platforms like TikTok and Instagram Reels. Want to instantly drop your face onto a trending fashion runway video or a famous dancer? Check out our [viral Video Face Swap](/video-face-swap) to create high-engaging video content seamlessly.
 
 ---
 
