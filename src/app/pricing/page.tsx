@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Check, Zap, Crown, Shield, Rocket, Clock, Coins } from "lucide-react";
@@ -8,13 +9,38 @@ import { useAuth } from "@/context/AuthContext";
 export default function PricingPage() {
   const router = useRouter();
   const { user, isLoading } = useAuth();
+  const [purchaseLoading, setPurchaseLoading] = useState<string | null>(null);
 
-  const handlePurchaseClick = () => {
+  const handlePurchaseClick = async (packId: string) => {
     if (!user) {
       router.push("/login?redirect=/pricing");
-    } else {
-      // Future logic: Trigger payment gateway (Stripe/Malum, etc.)
-      console.log("Proceeding to checkout...");
+      return;
+    }
+
+    setPurchaseLoading(packId);
+    try {
+      const res = await fetch("/api/payment/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          packId,
+          email: user.email,
+          userId: user.$id,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.link) {
+        window.location.href = data.link;
+      } else {
+        alert(data.error || "Failed to create payment. Please try again.");
+      }
+    } catch (err) {
+      console.error("Payment error:", err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setPurchaseLoading(null);
     }
   };
 
@@ -98,11 +124,13 @@ export default function PricingPage() {
             </div>
 
             <button
-              onClick={handlePurchaseClick}
-              disabled={isLoading}
+              onClick={() => handlePurchaseClick("starter")}
+              disabled={isLoading || purchaseLoading === "starter"}
               className="w-full btn bg-white/10 hover:bg-white/20 border-0 text-white rounded-xl"
             >
-              {!isLoading && user ? "Get Starter Pack" : "Sign in to buy"}
+              {purchaseLoading === "starter" ? (
+                <span className="loading loading-spinner loading-sm" />
+              ) : !isLoading && user ? "Get Starter Pack" : "Sign in to buy"}
             </button>
           </div>
 
@@ -167,11 +195,13 @@ export default function PricingPage() {
             </div>
 
             <button
-              onClick={handlePurchaseClick}
-              disabled={isLoading}
+              onClick={() => handlePurchaseClick("creator")}
+              disabled={isLoading || purchaseLoading === "creator"}
               className="w-full btn bg-gradient-to-r from-purple-600 to-blue-600 border-0 text-white hover:opacity-90 transition-opacity rounded-xl shadow-lg shadow-purple-500/25"
             >
-              {!isLoading && user ? "Get Creator Pack" : "Sign in to buy"}
+              {purchaseLoading === "creator" ? (
+                <span className="loading loading-spinner loading-sm" />
+              ) : !isLoading && user ? "Get Creator Pack" : "Sign in to buy"}
             </button>
           </div>
 
@@ -230,11 +260,13 @@ export default function PricingPage() {
             </div>
 
             <button
-              onClick={handlePurchaseClick}
-              disabled={isLoading}
+              onClick={() => handlePurchaseClick("studio")}
+              disabled={isLoading || purchaseLoading === "studio"}
               className="w-full btn bg-white text-black hover:bg-white/90 border-0 rounded-xl"
             >
-              {!isLoading && user ? "Get Studio Pack" : "Sign in to buy"}
+              {purchaseLoading === "studio" ? (
+                <span className="loading loading-spinner loading-sm" />
+              ) : !isLoading && user ? "Get Studio Pack" : "Sign in to buy"}
             </button>
           </div>
 
