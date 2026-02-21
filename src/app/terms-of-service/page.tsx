@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AI Face Swap Studio",
-  description: "Terms and conditions for using the AI Face Swap Studio platform.",
+  title: "Terms of Service | AI Face Swap Space",
+  description: "Terms and conditions for using the AI Face Swap Space platform.",
   robots: "noindex, follow",
 };
 
@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">1. Agreement to Terms</h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              By accessing and using AI Face Swap Studio, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access the service.
+              By accessing and using AI Face Swap Space, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access the service.
             </p>
           </section>
 
@@ -47,7 +47,7 @@ export default function TermsOfServicePage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">4. Limitation of Liability</h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              In no event shall AI Face Swap Studio or its operators be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use or inability to use the service.
+              In no event shall AI Face Swap Space or its operators be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use or inability to use the service.
             </p>
           </section>
 

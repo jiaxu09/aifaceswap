@@ -14,7 +14,7 @@ export default function Footer() {
               </div>
               <span className="text-lg font-bold">
                 <span className="gradient-text">aifaceswap</span>
-                <span className="text-white/60">.studio</span>
+                <span className="text-white/60">.space</span>
               </span>
             </Link>
             <p className="text-sm text-white/40 leading-relaxed">
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/30">
-            © {new Date().getFullYear()} aifaceswap.studio — All rights reserved.
+            © {new Date().getFullYear()} aifaceswap.space — All rights reserved.
           </p>
           <p className="text-sm text-white/30">
             Powered by AI deep learning technology

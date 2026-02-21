@@ -6,8 +6,8 @@ import AppProvider from "@/components/AppProvider";
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Face Swap Online | Video Face Swap & Virtual Try On Clothes - aifaceswap.studio",
-    template: "%s | aifaceswap.studio",
+    default: "AI Face Swap Online | Video Face Swap & Virtual Try On Clothes - aifaceswap.space",
+    template: "%s | aifaceswap.space",
   },
   description:
     "The best AI face swap tool online. Swap faces in videos, try on clothes virtually, and generate stunning face swap photos with our free AI-powered platform. No watermark, instant results.",
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     "ai face changer",
     "face swap video free",
   ],
-  metadataBase: new URL("https://aifaceswap.studio"),
+  metadataBase: new URL("https://aifaceswap.space"),
   openGraph: {
-    title: "AI Face Swap Online | Video Face Swap & Virtual Try On - aifaceswap.studio",
+    title: "AI Face Swap Online | Video Face Swap & Virtual Try On - aifaceswap.space",
     description:
       "Swap faces in videos, try on clothes virtually, and create amazing AI face swap photos. Free, fast, and high quality.",
-    url: "https://aifaceswap.studio",
-    siteName: "aifaceswap.studio",
+    url: "https://aifaceswap.space",
+    siteName: "aifaceswap.space",
     type: "website",
     locale: "en_US",
   },
@@ -65,9 +65,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "AIFaceSwap Studio",
-              url: "https://aifaceswap.studio",
-              logo: "https://aifaceswap.studio/android-chrome-512x512.png",
+              name: "AIFaceSwap Space",
+              url: "https://aifaceswap.space",
+              logo: "https://aifaceswap.space/android-chrome-512x512.png",
               sameAs: [],
               description:
                 "The best AI face swap tool online. Swap faces in videos, try on clothes virtually, and generate stunning face swap photos.",
@@ -81,11 +81,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "AIFaceSwap Studio",
-              url: "https://aifaceswap.studio",
+              name: "AIFaceSwap Space",
+              url: "https://aifaceswap.space",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://aifaceswap.studio/blog?q={search_term_string}",
+                target: "https://aifaceswap.space/blog?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),

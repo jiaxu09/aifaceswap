@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/posts";
 import { Calendar, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | AI Face Swap Studio",
+  title: "Blog | AI Face Swap Space",
   description: "Read the latest news, tutorials, and tips on using AI face swap and virtual try-on software to elevate your content.",
   keywords: ["ai face swap blog", "video face swap tutorial", "virtual try on guide", "deepfake software news"],
 };

@@ -31,7 +31,7 @@ export default function Navbar() {
               </div>
               <span className="text-lg font-bold tracking-tight">
                 <span className="gradient-text">aifaceswap</span>
-                <span className="text-white/60">.studio</span>
+                <span className="text-white/60">.space</span>
               </span>
             </Link>
 

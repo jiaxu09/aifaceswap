@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Virtual Try On Clothes with AI | Free Online Fitting Room",
     description:
       "Try on any outfit virtually. Upload your photo and a garment image — our AI shows how clothes look on you. Free AR clothing try on tool.",
-    url: "https://aifaceswap.studio/virtual-try-on-clothes",
+    url: "https://aifaceswap.space/virtual-try-on-clothes",
   },
 };
 

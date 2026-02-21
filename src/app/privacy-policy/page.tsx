@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AI Face Swap Studio",
+  title: "Privacy Policy | AI Face Swap Space",
   description: "Read our privacy policy to understand how we handle your data, images, and videos when using our AI tools.",
   robots: "noindex, follow", // Usually good practice to noindex boilerplate legal pages
 };
@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
             <p className="text-white/70 leading-relaxed mb-4">
-              Welcome to AI Face Swap Studio ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please stop using our services.
+              Welcome to AI Face Swap Space ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please stop using our services.
             </p>
           </section>
 

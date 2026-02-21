@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Sparkles, Video, Shirt, ImageIcon, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How It Works | AI Face Swap Studio",
+  title: "How It Works | AI Face Swap Space",
   description: "Learn how our advanced AI technology powers video face swaps, virtual clothing try-ons, and photo face swaps. Easy to use, fast, and secure.",
   keywords: ["how ai face swap works", "virtual try on tutorial", "ai deep learning", "face swap guide"],
 };

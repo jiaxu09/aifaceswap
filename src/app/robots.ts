@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/login", "/register"],
       },
     ],
-    sitemap: "https://aifaceswap.studio/sitemap.xml",
+    sitemap: "https://aifaceswap.space/sitemap.xml",
   };
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | AI Face Swap Studio",
+  title: "Frequently Asked Questions | AI Face Swap Space",
   description: "Get answers to common questions about our AI face swap, virtual clothing try-on features, privacy, and file formats.",
   keywords: ["faq", "help", "support", "face swap questions", "virtual try on help"],
 };
@@ -73,7 +73,7 @@ export default function FAQPage() {
             <span className="gradient-text">Questions</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/60">
-            Everything you need to know about using AI Face Swap Studio.
+            Everything you need to know about using AI Face Swap Space.
           </p>
         </div>
       </section>

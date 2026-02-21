@@ -90,10 +90,10 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "AIFaceSwap Studio",
+            name: "AIFaceSwap Space",
             applicationCategory: "MultimediaApplication",
             operatingSystem: "Web",
-            url: "https://aifaceswap.studio",
+            url: "https://aifaceswap.space",
             description:
               "Swap faces in videos, try on clothes virtually, and create stunning AI-generated face swap photos — all in one powerful platform.",
             offers: {

@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "What is the best AI face swap tool online?",
     answer:
-      "aifaceswap.studio is the best AI face swap tool available online. Unlike DeepSwap AI or other deepswap alternatives, our platform is completely free with no watermarks. Our AI face swap technology uses advanced face detection, alignment, and blending algorithms to produce photorealistic results — making it the best face swap AI tool available. It's a true deepswap free online alternative.",
+      "aifaceswap.space is the best AI face swap tool available online. Unlike DeepSwap AI or other deepswap alternatives, our platform is completely free with no watermarks. Our AI face swap technology uses advanced face detection, alignment, and blending algorithms to produce photorealistic results — making it the best face swap AI tool available. It's a true deepswap free online alternative.",
   },
   {
     question: "How is this different from DeepSwap AI?",

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "AI Video Face Swap Online | Replace Face in Any Video",
     description:
       "The best video face swap tool. Replace faces in videos online with AI — no watermark, no download required. Start your free trial today.",
-    url: "https://aifaceswap.studio/video-face-swap",
+    url: "https://aifaceswap.space/video-face-swap",
   },
 };
 

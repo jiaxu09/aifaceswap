@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ogImage = post.image ? [{ url: post.image }] : undefined;
 
     return {
-      title: `${post.title} | AI Face Swap Studio Blog`,
+      title: `${post.title} | AI Face Swap Space Blog`,
       description: post.meta_description,
       keywords: post.keywords,
       openGraph: {
@@ -66,25 +66,25 @@ export default async function BlogPostPage({ params }: Props) {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.meta_description,
-            image: post.image ? `https://aifaceswap.studio${post.image}` : undefined,
+            image: post.image ? `https://aifaceswap.space${post.image}` : undefined,
             datePublished: post.date,
             dateModified: post.date,
             author: {
               "@type": "Organization",
               name: post.author,
-              url: "https://aifaceswap.studio",
+              url: "https://aifaceswap.space",
             },
             publisher: {
               "@type": "Organization",
-              name: "AIFaceSwap Studio",
+              name: "AIFaceSwap Space",
               logo: {
                 "@type": "ImageObject",
-                url: "https://aifaceswap.studio/android-chrome-512x512.png",
+                url: "https://aifaceswap.space/android-chrome-512x512.png",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://aifaceswap.studio/blog/${post.slug}`,
+              "@id": `https://aifaceswap.space/blog/${post.slug}`,
             },
             keywords: post.keywords,
           }),

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Best AI Face Swap Photo Generator | DeepSwap Alternative",
     description:
       "Swap faces in any photo with AI. Better than DeepSwap — no watermark, instant results. Start your free trial online.",
-    url: "https://aifaceswap.studio/ai-face-swap",
+    url: "https://aifaceswap.space/ai-face-swap",
   },
 };
 

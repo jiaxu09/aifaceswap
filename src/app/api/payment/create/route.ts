@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Payment service not configured" }, { status: 500 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aifaceswap.studio";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aifaceswap.space";
 
     const payload = {
       amount: pack.amount,
