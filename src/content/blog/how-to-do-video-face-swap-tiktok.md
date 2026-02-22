@@ -8,8 +8,6 @@ slug: "how-to-do-video-face-swap-tiktok"
 image: "/images/blog/how-to-do-video-face-swap-tiktok.webp"
 ---
 
-# How to Do a Video Face Swap for TikTok (2026 Guide)
-
 
 If you have been scrolling through TikTok recently, you’ve probably noticed an explosion of hilarious movie edits, viral dance challenges with celebrities, and mind-bending character mashups. The secret behind this massive trend? **AI Video Face Swapping.**
 
